@@ -1,18 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { JournalApp } from './JournalApp'
-import './styles.css'
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+
+import { JournalApp } from './JournalApp';
 import { store } from './store';
-import { Provider } from 'react-redux'
+import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <Provider store={store}>
+    <Provider store={ store }>
       <BrowserRouter>
         <JournalApp />
       </BrowserRouter>
